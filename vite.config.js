@@ -14,6 +14,5 @@ export default defineConfig({
         }
     }
 },
-  plugins: [react()],
-  base: '/appMeteo/'
+  plugins: [react()]
 })

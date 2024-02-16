@@ -1,6 +1,6 @@
 // WeatherCard.js
 import React, { useState, useEffect } from 'react';
-import { HashRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import WeatherDetails from './WeatherDetails';
 import { Card, CardBody, CardFooter, Typography, Button, Input } from "@material-tailwind/react";
 
@@ -113,12 +113,12 @@ const WeatherCard = () => {
   };
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home weatherData={weatherData} loading={loading} error={error} handleSearchCitySubmit={handleSearchCitySubmit} handleGeolocationClick={handleGeolocationClick} handleSearchCityChange={handleSearchCityChange} />} />
         <Route path="/details" element={<WeatherDetails weatherData={weatherData} onBackClick={() => window.history.back()} />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
@@ -183,7 +183,7 @@ const Home = ({ weatherData, loading, error, handleSearchCitySubmit, handleGeolo
       {loading && <p>In caricamento...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {weatherData && (
-        <Link to="#/details">
+        <Link to="/details">
           <Button size="sm" variant="text" color="white" className="flex items-center gap-2">
             Previsioni a 3 giorni
             <svg

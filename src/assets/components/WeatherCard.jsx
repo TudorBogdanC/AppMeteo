@@ -183,7 +183,7 @@ const Home = ({ weatherData, loading, error, handleSearchCitySubmit, handleGeolo
       {loading && <p>In caricamento...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {weatherData && (
-        <Link to="#/details">
+        <Link to="/details">
           <Button size="sm" variant="text" color="white" className="flex items-center gap-2">
             Previsioni a 3 giorni
             <svg

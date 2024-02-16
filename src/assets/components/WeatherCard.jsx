@@ -1,6 +1,6 @@
 // WeatherCard.js
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import WeatherDetails from './WeatherDetails';
 import { Card, CardBody, CardFooter, Typography, Button, Input } from "@material-tailwind/react";
 
